@@ -1,13 +1,18 @@
 import React from 'react';
 
+
 const ManageOrder = (props) => {
-    const { _id, name, email, date, phone, status } = props.order;
+    const { _id, name, email, date, phone, status, price } = props.order;
     const { handleApproveOrder, handleDeleteOrder } = props;
+
+   
 
     return (
         <tr>
             <td>{email}</td>
+           
             <td>{name}</td>
+            <td>{price}</td>
             <td>{phone}</td>
             <td>{date}</td>
             <td className={status === 'pending' ? 'text-danger' : 'text-success'}>{status}</td>

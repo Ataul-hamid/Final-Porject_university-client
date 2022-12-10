@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset } = useForm();
 
     useEffect(() => {
-        const url = `https://shrouded-crag-70396.herokuapp.com/products/${productId}`;
+        const url = `http://localhost:5000/products/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -22,8 +22,10 @@ const PlaceOrder = () => {
     const onSubmit = data => {
         data.order = product._id;
         data.status = 'pending';
+        data.name=product.name;
+        data.price=product.price;
 
-        const url = `https://shrouded-crag-70396.herokuapp.com/placeOrder`;
+        const url = `http://localhost:5000/placeOrder`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -61,6 +63,14 @@ const PlaceOrder = () => {
                         <div className="mb-3">
                             <label htmlFor="forName" className="form-label">Name</label>
                             <input defaultValue={user.displayName} {...register("name")} type="text" className="form-control" id="forName" required />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="forName" className="form-label">Product Name</label>
+                            <input defaultValue={product.name}  {...register("pname")}type="text" className="form-control" id="forName" required />
+                        </div>
+                        <div className="mb-3">
+                            <label htmlFor="forName" className="form-label">Price</label>
+                            <input defaultValue={product.price}  {...register("price")}type="text" className="form-control" id="forName" required />
                         </div>
                         <div className="mb-3">
                             <label htmlFor="forEmail" className="form-label">Email</label>

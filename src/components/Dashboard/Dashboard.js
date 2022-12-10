@@ -10,6 +10,7 @@ import ManageProducts from '../ManageProducts/ManageProducts';
 import useAuth from '../hooks/useAuth';
 import AdminRoute from '../AdminRoute/AdminRoute';
 import './Dashboard.css';
+import Sales from './Sales/Sales';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -28,7 +29,7 @@ const Dashboard = () => {
                 {/* Dashboard Sidebar  */}
                 <nav id="sidebar" className={toggle ? '' : 'active'}>
                     <div className="sidebar-header">
-                        <Link to={'/home'}><h3>Smart Watch DashBoard </h3></Link>
+                        <Link to={'/home'}><h3>Ema-John DashBoard </h3></Link>
                     </div>
 
                     <ul className="list-unstyled components">
@@ -36,8 +37,13 @@ const Dashboard = () => {
                             <li>
                                 <Link to={`${url}/manageOrders`}>Manage All Orders</Link>
                             </li>
+                            <li><a href='https://ema-john-simple-eb79e.web.app/shop'>Stock</a></li>
+                            <li><a href='https://go-home-pharmachy.web.app/home#home'>pharmachy</a></li>
                             <li>
                                 <Link to={`${url}/addProduct`}>Add A Product</Link>
+                            </li>
+                            <li>
+                                <Link to={`${url}/sales`}>Sales</Link>
                             </li>
                             <li>
                                 <Link to={`${url}/manageProducts`}>Manage Products</Link>
@@ -92,7 +98,7 @@ const Dashboard = () => {
                         {/* <Route exact path={path}>
                             <h3>Dashboard Home</h3>
                         </Route> */}
-                        <Route path={`${path}/pay`}>
+                        <Route path={`${path}/pay/:orderId`}>
                             <Pay></Pay>
                         </Route>
                         <Route path={`${path}/myOrders`}>
@@ -112,6 +118,9 @@ const Dashboard = () => {
                         </AdminRoute>
                         <AdminRoute path={`${path}/manageProducts`}>
                             <ManageProducts></ManageProducts>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/sales`}>
+                            <Sales></Sales>
                         </AdminRoute>
                     </Switch>
                 </div>

@@ -53,7 +53,7 @@ const Blogs = () => {
                         <Card className='p-0 border-0 shadow'>
                             <Card.Img variant="top" className="picture" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/top-20-watch-brands-rolex-1617145834.jpg?crop=1xw:1xh;center,top&resize=480:*" />
                             <Card.Body>
-                                <Card.Title>Watch Evolution</Card.Title>
+                                <Card.Title>Ema-John Evolution</Card.Title>
                                 <Card.Text><small className='text-muted'>Watches evolved from portable spring-driven clocks, which first appeared in 15th-century Europe. Watches were not widely worn in pockets until the 17th century. a mainspring, and keeping time with an oscillating balance wheel. These are called mechanical watches.A watch is a portable timepiece intended to be carried or worn by a person.  ..</small></Card.Text>
                                 <div className='d-flex justify-content-between'>
                                     <small className='text-muted'>NOV. 03, 2021</small>

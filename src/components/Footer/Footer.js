@@ -9,7 +9,8 @@ const Footer = () => {
                 <Row className='row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 mb-4'>
                     <Col className='mb-3'>
                         <div className='mb-4'>
-                            <h2>Smart Watch</h2>
+                            <h2>Ema-john</h2>
+                            <a href='https://ema-john-simple-eb79e.web.app/shop'>Ema-John</a>
 
                         </div>
                     </Col>
@@ -43,7 +44,7 @@ const Footer = () => {
                 <hr />
                 <div className='d-flex flex-wrap justify-content-lg-between'>
                     <div>
-                        All rights reserved © Smart Watch 2021
+                        All rights reserved © Ema-John 2021
                     </div>
                     <div>
                         <small>Terms & Conditions</small>

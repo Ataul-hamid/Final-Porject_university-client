@@ -10,7 +10,7 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('https://shrouded-crag-70396.herokuapp.com/users/admin', {
+        fetch('http://localhost:5000/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

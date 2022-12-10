@@ -9,7 +9,7 @@ const UserReview = () => {
     const onSubmit = data => {
         data.displayName = user.displayName;
         data.email = user.email;
-        const url = `https://shrouded-crag-70396.herokuapp.com/addReview`;
+        const url = `http://localhost:5000/addReview`;
         fetch(url, {
             method: 'POST',
             headers: {
